@@ -1,0 +1,3 @@
+https://stackoverflow.com/questions/61548367/how-to-export-javafx-14-app-to-executable-in-intellij
+https://www.quora.com/How-can-I-deploy-a-Java-desktop-application-to-a-exe-installer-running-with-a-MySQL-database
+https://openjfx.io/openjfx-docs/#next-steps

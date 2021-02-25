@@ -1,0 +1,2 @@
+-creat a dynamique table with n column whos chosen by the user when displaying the selective column .
+-where each one of those have  a unique switch case . 

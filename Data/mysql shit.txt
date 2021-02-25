@@ -1,0 +1,4 @@
+https://www.javatpoint.com/creating-mysql-database-with-xampp
+https://www.javaguides.net/2019/07/javafx-jdbc-mysql-tutorial.html
+https://medium.com/better-programming/the-mysql-cheatsheet-we-all-need-d1af0377bdc6
+https://medium.com/@ashiqgiga07/working-with-mysql-dae8f149aa57

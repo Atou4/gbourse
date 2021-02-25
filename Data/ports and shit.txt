@@ -1,0 +1,4 @@
+3306
+xprotocole 33060
+root password 29062000riot
+DESKTOP-23C9J70

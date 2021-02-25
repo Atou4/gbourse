@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="555.0" prefWidth="1054.0" style="-fx-background-color: #fff;" stylesheets="@../style/fullpackstyling.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.mainframecontroller">
+   <children>
+      <Pane prefHeight="66.0" prefWidth="1054.0" style="-fx-background-color: #011638;">
+         <children>
+            <Label layoutX="8.0" layoutY="16.0" prefHeight="34.0" prefWidth="291.0" styleClass="label1" stylesheets="@../style/fullpackstyling.css" text="Université Amar Telidji Laghouat" textFill="#f5f2f2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="840.0" layoutY="16.0" prefHeight="34.0" prefWidth="207.0" styleClass="label1" stylesheets="@../style/fullpackstyling.css" text="جامعة عمار ثليجي الاغواط" textFill="#f5f2f2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="66.0" fitWidth="72.0" layoutX="491.0">
+               <image>
+                  <Image url="@../image/universite-amar-telidji-laghouat-logo-algeria%20(2).png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+      <Pane layoutY="67.0" prefHeight="488.0" prefWidth="131.0" style="-fx-background-color: #E8EBF7;">
+         <children>
+            <Button fx:id="affiche" layoutX="8.0" layoutY="52.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="115.0" text="          AFFICHER" textAlignment="CENTER" textFill="#f2eaea" />
+            <ImageView fitHeight="41.0" fitWidth="40.0" layoutX="8.0" layoutY="49.0">
+               <image>
+                  <Image url="@../image/77_Essential_Icons_Computer.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="modifi" layoutX="8.0" layoutY="129.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="115.0" text="         MODIFIER" textAlignment="CENTER" textFill="#f2eaea" />
+            <Button fx:id="selec" layoutX="8.0" layoutY="210.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="115.0" text="          SELECTION" textAlignment="CENTER" textFill="#f2eaea" />
+            <Button fx:id="impo" layoutX="8.0" layoutY="294.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="115.0" text="          IMPORTER" textAlignment="CENTER" textFill="#f2eaea" />
+            <ImageView fitHeight="34.0" fitWidth="40.0" layoutX="8.0" layoutY="129.0">
+               <image>
+                  <Image url="@../image/77_Essential_Icons_Refresh.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="34.0" fitWidth="40.0" layoutX="8.0" layoutY="210.0">
+               <image>
+                  <Image url="@../image/77_Essential_Icons_Rearrange.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="41.0" fitWidth="40.0" layoutX="8.0" layoutY="291.0">
+               <image>
+                  <Image url="@../image/impex.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="quitter" layoutX="8.0" layoutY="385.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="115.0" text="          QUITTER" textAlignment="CENTER" textFill="#f2eaea" />
+            <ImageView fitHeight="34.0" fitWidth="40.0" layoutX="8.0" layoutY="385.0">
+               <image>
+                  <Image url="@../image/77_Essential_Icons_Cancel.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+      <Label layoutX="138.0" layoutY="128.0" prefHeight="34.0" prefWidth="534.0" styleClass="label2" stylesheets="@../style/fullpackstyling.css" text="-Ce programme permi de gerer les stages et Les bourses accordées " textFill="#f5f2f2">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="138.0" layoutY="73.0" prefHeight="34.0" prefWidth="298.0" styleClass="label1" stylesheets="@../style/fullpackstyling.css" text="Gestion des boursiers et stagiaires" textFill="#252424">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="138.0" layoutY="162.0" prefHeight="34.0" prefWidth="534.0" styleClass="label2" stylesheets="@../style/fullpackstyling.css" text="pour les doctorants." textFill="#f5f2f2">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+
+</AnchorPane>

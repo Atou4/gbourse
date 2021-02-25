@@ -1,0 +1,6 @@
+set PATH_TO_FX="C:\Program Files\Java\javafx-sdk-14.0.1\lib"
+set PATH_TO_FX_MODS="C:\Program Files\Java\javafx-jmods-14.0.1"
+java --module-path "%PATH_TO_FX%;mods" -m hellofx/hellofx.HelloFX
+jlink --module-path "%PATH_TO_FX_MODS%;mods" --add-modules Bulltin --output Bulltin
+Bulltin\bin\java -m src/sample.Main
+-jar executable java --module-path "C:\Program Files\Java\javafx-sdk-14.0.1\lib" --add-modules=javafx.controls,javafx.graphics,javafx.fxml -jar Bulltin.jar

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.logincontroller">
+   <children>
+      <AnchorPane prefHeight="503.0" prefWidth="382.0" style="-fx-background-color: #fff;">
+         <children>
+            <ImageView fitHeight="220.0" fitWidth="229.0" layoutX="77.0" layoutY="14.0">
+               <image>
+                  <Image url="@../image/universite-amar-telidji-laghouat-logo-algeria.jpg" />
+               </image>
+            </ImageView>
+            <Pane layoutX="50.0" layoutY="244.0" prefHeight="245.0" prefWidth="283.0" AnchorPane.bottomAnchor="14.0" AnchorPane.topAnchor="244.0">
+               <children>
+                  <TextField fx:id="txtUsername" layoutX="7.0" prefHeight="34.0" prefWidth="275.0" promptText="username " stylesheets="@../style/fullpackstyling.css" />
+                  <PasswordField fx:id="txtPassword" layoutX="7.0" layoutY="61.0" prefHeight="34.0" prefWidth="275.0" promptText="password" stylesheets="@../style/fullpackstyling.css" />
+                  <Button fx:id="btnSignin" layoutX="145.0" layoutY="125.0" mnemonicParsing="false" onMouseClicked="#handleButtonAction" prefHeight="34.0" prefWidth="137.0" styleClass="buttonx" stylesheets="@../style/fullpackstyling.css" text="Sign in" />
+                  <Label fx:id="btnForgot" alignment="CENTER" layoutX="8.0" layoutY="131.0" prefHeight="23.0" prefWidth="115.0" text="Entrer vers le prgrm" textFill="#5383ff">
+                     <font>
+                        <Font name="Segoe UI" size="12.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="8.0" layoutY="190.0" prefHeight="7.0" prefWidth="275.0" />
+                  <Label alignment="CENTER" layoutX="126.0" layoutY="179.0" prefHeight="23.0" prefWidth="31.0" style="-fx-background-color: #fff;" textFill="#5b5a5a">
+                     <font>
+                        <Font name="Segoe UI" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblErrors" alignment="CENTER" layoutX="8.0" layoutY="95.0" prefHeight="23.0" prefWidth="275.0" textFill="#ff6354">
+                     <font>
+                        <Font name="Segoe UI" size="10.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button fx:id="closeButton" layoutX="344.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#handleCloseButtonAction" prefHeight="25.0" prefWidth="38.0" style="-fx-background-color: #fff;" />
+            <ImageView fitHeight="36.0" fitWidth="35.0" layoutX="346.0" layoutY="-3.0">
+               <image>
+                  <Image url="@../image/77_Essential_Icons_Cancel.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
