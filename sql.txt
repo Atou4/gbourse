@@ -1,0 +1,2 @@
+alter table bourse
+add dure INT  AS DATEDIFF(datedarriver, datedepart);

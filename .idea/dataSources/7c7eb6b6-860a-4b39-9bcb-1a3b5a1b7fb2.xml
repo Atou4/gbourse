@@ -1366,7 +1366,8 @@
     <column id="341" parent="332" name="durre">
       <Position>8</Position>
       <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
+      <DefaultExpression>to_days(`datedarriver`) - to_days(`datedepart`)</DefaultExpression>
+      <ColumnKind>generated-virtual</ColumnKind>
     </column>
     <column id="342" parent="332" name="datedepart">
       <Position>9</Position>
@@ -1416,7 +1417,7 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="350" parent="332" name="anne fin">
+    <column id="350" parent="332" name="annefin">
       <Position>17</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>

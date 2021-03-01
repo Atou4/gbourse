@@ -1,5 +1,6 @@
 package sample.controllers;
 
+import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
@@ -7,6 +8,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
+
+import com.opencsv.CSVReader;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -20,6 +23,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import sample.connectiondb;
+
+import javax.swing.*;
 
 
 public class mainframecontroller implements Initializable{
@@ -37,11 +42,11 @@ public class mainframecontroller implements Initializable{
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
     }
-    public void handleCloseButtonAction(MouseEvent event) {
+    public void handleCloseButtonAction(javafx.event.ActionEvent event) throws IOException{
         Stage stage = (Stage) quitter.getScene().getWindow();
         stage.close();
     }
-    public void handleaffiche(MouseEvent event) {
+    public void handleaffiche(javafx.event.ActionEvent event) throws IOException{
         try {
 
             //add you loading or delays - ;-)
@@ -59,7 +64,7 @@ public class mainframecontroller implements Initializable{
 
     }
 
-    public void handlemodifi(MouseEvent event) {
+    public void handlemodifi(javafx.event.ActionEvent event) throws IOException {
         try {
 
             //add you loading or delays - ;-)
@@ -75,5 +80,45 @@ public class mainframecontroller implements Initializable{
             System.err.println(ex.getMessage());
         }
 
+    }
+    public void importerbutton (javafx.event.ActionEvent event) throws IOException {
+        JFileChooser chooser = new JFileChooser();
+        chooser.setCurrentDirectory(new java.io.File("."));
+        chooser.setDialogTitle("choosertitle");
+        chooser.setAcceptAllFileFilterUsed(false);
+
+        if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
+            System.out.println("getCurrentDirectory(): " + chooser.getCurrentDirectory());
+            System.out.println("getSelectedFile() : " + chooser.getSelectedFile());
+        } else {
+            System.out.println("No Selection ");
+        }
+
+        try (CSVReader reader = new CSVReader(new FileReader("data.csv"), ',');
+             Connection connection = connectiondb.conDB();)
+        {
+            String insertQuery = "Insert into bourse (id,cd1, cd2, fname,lname,datd,univ) values (?,?,?,?,?,?,?)";
+            PreparedStatement pstmt = connection.prepareStatement(insertQuery);
+            String[] rowData = null;
+            int i = 0;
+            while((rowData = reader.readNext()) != null)
+            {
+                for (String data : rowData)
+                {
+                    pstmt.setString((i % 7) + 1, data);
+
+                    if (++i % 7 == 0)
+                        pstmt.addBatch();// add batch
+
+                    if (i % 70 == 0)// insert when the batch size is 10
+                        pstmt.executeBatch();
+                }
+            }
+            System.out.println("Data Successfully Uploaded");
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
     }
 }

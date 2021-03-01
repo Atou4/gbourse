@@ -45,11 +45,6 @@
                </children>
             </Pane>
             <Button fx:id="closeButton" layoutX="344.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#handleCloseButtonAction" prefHeight="25.0" prefWidth="38.0" style="-fx-background-color: #fff;" />
-            <ImageView fitHeight="36.0" fitWidth="35.0" layoutX="346.0" layoutY="-3.0">
-               <image>
-                  <Image url="@../image/77_Essential_Icons_Cancel.png" />
-               </image>
-            </ImageView>
          </children>
       </AnchorPane>
    </children>

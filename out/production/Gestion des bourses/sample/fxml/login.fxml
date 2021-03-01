@@ -25,7 +25,7 @@
                <children>
                   <TextField fx:id="txtUsername" layoutX="7.0" prefHeight="34.0" prefWidth="275.0" promptText="username " stylesheets="@../style/fullpackstyling.css" />
                   <PasswordField fx:id="txtPassword" layoutX="7.0" layoutY="61.0" prefHeight="34.0" prefWidth="275.0" promptText="password" stylesheets="@../style/fullpackstyling.css" />
-                  <Button fx:id="btnSignin" layoutX="145.0" layoutY="125.0" mnemonicParsing="false" onMouseClicked="#handleButtonAction" prefHeight="34.0" prefWidth="137.0" stylesheets="@../style/fullpackstyling.css" text="Sign in" />
+                  <Button fx:id="btnSignin" layoutX="145.0" layoutY="125.0" mnemonicParsing="false" onMouseClicked="#handleButtonAction" prefHeight="34.0" prefWidth="137.0" styleClass="buttonx" stylesheets="@../style/fullpackstyling.css" text="Sign in" />
                   <Label fx:id="btnForgot" alignment="CENTER" layoutX="8.0" layoutY="131.0" prefHeight="23.0" prefWidth="115.0" text="Entrer vers le prgrm" textFill="#5383ff">
                      <font>
                         <Font name="Segoe UI" size="12.0" />
@@ -45,11 +45,6 @@
                </children>
             </Pane>
             <Button fx:id="closeButton" layoutX="344.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#handleCloseButtonAction" prefHeight="25.0" prefWidth="38.0" style="-fx-background-color: #fff;" />
-            <ImageView fitHeight="36.0" fitWidth="35.0" layoutX="346.0" layoutY="-3.0">
-               <image>
-                  <Image url="@../image/77_Essential_Icons_Cancel.png" />
-               </image>
-            </ImageView>
          </children>
       </AnchorPane>
    </children>

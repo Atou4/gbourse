@@ -10,6 +10,7 @@
 .button:hover
 {
 -fx-background-color : 	#778899 ;
+    -fx-border-color: 	#778899;
 -fx-text-fill:   #E8EBF7;
     -fx-border-radius: 10;
     -fx-font-family: "Montserrat-Light";
@@ -23,9 +24,19 @@
     -fx-border-radius: 10;
     -fx-font-family: "Montserrat-Light";
     -fx-font-size: 12;
-
 }
-
+.buttond
+{
+    -fx-background-color :  #fff;
+    -fx-border-color: #011638;
+    -fx-text-fill:  #011638;
+}
+.buttond:hover
+{
+    -fx-background-color : #011638;
+    -fx-border-color: #011638;
+    -fx-text-fill:   #FFF;
+}
 .buttonx
 {
 -fx-background-color :  #fff;
@@ -47,7 +58,7 @@
 .table-view .column-header,
 .table-view .column-header-background .filler {
     -fx-cell-size : 20;
-    -fx-background-color:   #2D75E8;
+    -fx-background-color:   #011638;
 }
 .table-view .column-header .label{
 
@@ -55,12 +66,7 @@
    -fx-font-weight: bold;
    -fx-alignment: CENTER_LEFT;
 }
-.table-view .cell{
-   -fx-cell-size: 30;
-  -fx-alignment: center-left;
-  -fx-text-fill: #000000;
-  -fx-alignment: CENTER_LEFT;
-}
+
 
 .table-row-cell:selected {
     -fx-background-color:  rgb(127, 172, 243);
@@ -82,7 +88,7 @@
 .table-view .scroll-bar:horizontal .track,
 .table-view .scroll-bar:vertical .track{
 	-fx-background-color: transparent;
-	-fx-border-color:derive(  #2D75E8,80%);
+	-fx-border-color:derive(  #011638,80%);
 	-fx-background-radius: 2em;
 	-fx-border-radius:2em;
 }
@@ -129,6 +135,6 @@
 .label2 {
     -fx-font-family: "Montserrat-Light";
     -fx-font-size: 16;
-    -fx-text-fill:  #5383ff;
+    -fx-text-fill: #2eaeff;
     -fx-background-color:transparent;
 }
